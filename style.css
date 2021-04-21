@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+:root{
+  --primary-color:#3363ff;
+  --light-blue:#c2cffc;
+  --light-gray:#d8e0fd;
+  --gray:#3d3d3d;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #eee;
+  min-height: 100vh;
+}
+
+header{
+  width: 100%;
+  background-color: var(--primary-color);
+  height: 70px;
+  display: flex;
+  top: 0;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+
+}
+h2{
+  color: #fff;
+  font-size: 2em;
+}
+section{
+  margin-top: 12rem;
+}
+.books{
+  display: grid;
+  width: 104em;
+  grid-gap: 6rem ;
+  grid-template-columns: repeat(auto-fit,minmax(25rem,2fr));
+  align-items: start;
+}
+.newBook{
+  background-color: rgba(255, 255, 255, 0.80);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 3rem 6rem rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.newBook:hover{
+  transform:  translateY(-0.5%);
+  box-shadow: 0 4rem 8rem rgba(0,0,0,0.5);
+}
+
+
+.card-img{
+  display: block;
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.card-content{
+  padding: 3rem;
+}
+.card-header{
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+.card-text{
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  color: var(--gray);
+  margin-bottom: 2rem;
+}
+.card-btn{
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--primary-color);
+  background-color: var(--light-gray);
+  border: none;
+  border-radius: 0.4rem;
+  transition: 0.2s;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+}
+.card-btn:hover,.card-btn:active{
+background-color: var(--light-blue);
+
+}
+@media only screen and(max-width:60em){
+  body{
+    padding: 3rem;
+  }
+  .books{
+    grid-gap:3rem;
+  }
+}
