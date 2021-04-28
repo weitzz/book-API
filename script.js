@@ -17,7 +17,7 @@ async function fetchData() {
     console.log(data.data) 
     createBooks(data)
   } catch (error) {
-    console.error('Deu ruim', error)
+    console.error(error)
   }
 }
 
